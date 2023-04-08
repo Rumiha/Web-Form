@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>Testni Zadatak</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+    <div class="caption">
+        <h4 style="margin: 0; font-size: 12px;">TESTNI ZADATAK</h4>
+        <h1 style="margin: 0;">Web Forma</h1>
+    </div>
+    <hr>
+    <div class="instructions">
+        <div class="instruction" id="instruction1">
+            <p><b>1. KORAK</b></p>
+            <p>Odaberite koju vrstu upita želite poslati.</p>
+        </div>
+        <div class="instruction" id="instruction2">
+            <p><b>2. KORAK</b></p> 
+            <p>Nakon odabira ispunite svoje podatke i popunite polja.</p>   
+        </div>
+        <div class="instruction" id="instruction3">
+            <p><b>3. KORAK</b></p>
+            <p>Nakon što ste ispunili sva obavezna polja pritisnite gumb "Pošalji".</p>     
+        </div>
+    </div>
+    <hr>
+	<div class="buttons" style="margin-top: 60px;">
+		<button class="mybutton" id="button-form-2" onclick="openForm2()">Općeniti upit</button>
+		<button class="mybutton" id="button-form-1" onclick="openForm1()">Narudžba</button>
+	</div>
+    
+
+
+	<div class="form-1" id="form-1" style="display: none;">
+		<form method="POST" action="process-form1.php">
+			<div class="caption" style="margin-bottom: 20px;">
+				<h2>Narudžba</h2>
+			</div>
+			<div class="inputs">
+				<input type="text" placeholder="Ime i Prezime" name="name" id="name1" required>
+				<input type="email" placeholder="E-mail" name="email" id="email1" required>
+				<input type="text" placeholder="Adresa" name="address" id="address" required>
+				<input type="text" placeholder="OIB" name="oib" id="oib" required>
+				<input type="text" placeholder="Napomena" name="note" id="note" required>
+				<select name="package" id="package" required>
+					<option value="" disabled selected>Odabir paketa</option>
+					<option value="Paket 1">Paket 1</option>
+					<option value="Paket 2">Paket 2</option>
+					<option value="Paket 3">Paket 3</option>
+				</select>
+			</div>
+			<div class="buttons">
+				<button type="submit" class="mybutton">Pošalji</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="form-2" id="form-2" style="display: none;">
+		<form method="POST" action="process-form2.php">
+			<div class="caption" style="margin-bottom: 20px;">
+				<h2>Općeniti upit</h2>
+			</div>
+			<div class="inputs">
+				<input type="text" placeholder="Ime i Prezime" name="name" id="name2" required>
+				<input type="email" placeholder="E-mail" name="email" id="email2" required>
+				<input type="text" placeholder="Upit" name="question" id="question" required>
+			</div>
+			<div class="buttons">
+				<button type="submit" class="mybutton">Pošalji</button>
+			</div>
+		</form>
+	</div>
+	<hr id="hr-end">
+	<script src="script.js"></script>
+</body>
+</html>

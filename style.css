@@ -1,0 +1,150 @@
+html{
+	height: 100%;
+}
+
+body{
+    width: 60%;
+	height: 100%;
+    margin-left:auto;
+    margin-right:auto;
+	padding-bottom: 100px;
+    font-family: sans-serif;
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(144, 165, 140));
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.caption{
+    text-align: center;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	font-weight: bold;    
+}
+
+.instructions, .buttons{
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	
+}
+
+.instruction{
+	border: 1px solid #848484;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+	transition: background-color 1s ease;
+}
+
+.instruction p{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-weight:lighter;
+	font-size: small;
+}
+
+
+.mybutton{
+	border: 1px solid #555555;
+	background-color: rgb(239, 239, 239);
+	
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 0;
+	transition: background-color 0.3s ease;
+	text-transform: uppercase;
+	width: 200px;
+	white-space: nowrap;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.mybutton:hover{
+	background-color: rgb(188, 255, 159);
+}
+
+#hr-end{
+	margin-top: 50px;
+	transition: margin-top 1s ease-out;
+}
+
+#hr-end.hr-change{
+	margin-top: 100px;
+}
+
+.inputs{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 40px;
+}
+
+input[type=text], 
+input[type=password],
+input[type=email],
+select {
+	width: 410px;
+	padding: 15px;
+	margin: 1px 0 10px 0;
+	border: none;
+	background: #f1f1f1;
+	display: inline-block;
+	box-sizing:border-box;
+}
+
+input[type=text]:focus, 
+input[type=password]:focus,
+input[type=email]:focus,
+select:focus {
+	background-color: #c9ffb4;
+	outline: none;
+}
+
+
+#mytable{
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	
+}
+#mytable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	border: 1px solid #000000;	
+	background-color: rgba(146, 255, 146, 0.541);
+}
+
+#mytable tr:nth-child(even){background-color: #f2f2f2;}
+
+#mytable tr:hover {background-color: #ddd;}
+
+
+#mytable td, tr{
+	padding: 8px;
+	text-align: left;
+	border: 1px solid #000000;
+}
+
+@media (max-width: 1024px) {
+    .instruction {
+        flex-basis: calc(100% - 20px);
+    }
+
+	body{
+		width: 80%;
+	}
+
+	input[type=text], 
+	input[type=password],
+	input[type=email],
+	select {
+		width: 75%;
+	}
+}
